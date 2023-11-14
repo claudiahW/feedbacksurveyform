@@ -10,114 +10,92 @@
 
 
   <body>
-    <div class="container">
+    <div class="container mt-5 text-center">
     <div>   
-  <h1 id="title">Memphis Hospital Survey Form</h2>
+  <h1 id="title">Tell us what you think!</h2>
   <p id="description"> Thank you for taking your time to help us serve you better</p>
 </div> 
 
-  <form id="survey-form">
+  <form action="/action_page.php">
 
-<fieldset>
-   <label id="name-label">
-     name <input id="name" type="text" placeholder="Enter your name" required /> </label>
-    <label id="email-label"> email<input id="email" type="email" placeholder="Enter your email" required /> </label>
-     <label id="number-label"> Age(optional) <input id="number" type="number" min="18" max="120" placeholder="Age" /> </label>
-     </fieldset>
-     <fieldset>
-<label> Which option best describes your current role?
-  <select id="dropdown">
-  <option>Select current role</option>
-  <option>Student</option>
-  <option>Full time job</option>
-  <option>Full time learner</option>
-  <option>Prefer not to say</option>
+<div>
+    <div class="mt-3 mb-3">
+   <label id="name-label">Name:
+    <input id="name" type="text" placeholder="E.g. John Doe" required /> </label>
+</div>
+<div class="mt-3 mb-3">
+     <label id="phone-label">Phone Number:
+    <input id="phone" type="text" placeholder="+254(712345678)" /> </label>
+</div>
+<div class="mt-3 mb-3">
+    <label id="email-label">Email:
+        <input id="email" type="email" placeholder="Enter your email" required /> </label>
+    </div>
+    <div class="mt-3 mb-3">
+     <label id="number-label"> Age(optional):
+        <input id="number" type="number" min="1" max="120" placeholder="" /> </label>
+    </div>
+
+   </div>
+
+ <div class="mt-3">
+<label for="clinic" class="form-label"> Which clinic did you visit?</label>
+
+  <input class="form-control" list="clinics" name="clinic" id="clinic">
+  <datalist id="clinics">
+  <option>Family Clinic</option>
+  <option>Radiology</option>
+  <option>Paediatrics</option>
+  <option>Oncology</option>
+  <option>Orthopedics</option>
   <option>Other</option>
-</select>
-</label>
-       </fieldset>
-       <fieldset class="survey-form">
-         Would you recommend FreeCodecamp to a friend?
-     <label> <input type="radio" name="recommend" value="definitely">Definitely</input>
-     </label>
-     <label>  
-       <input type="radio" name="recommend" value="maybe">Maybe</input> 
-       </label>
-      <label>  <input type="radio" name="recommend" value="nsure">Not 
-        sure</input>  
-        </label> 
+</datalist> 
+<br>
+</div>
+ <div class="survey-form p-3">
+         Would you recommend Memphis Hospital to a friend?
+         <br>
 
+         <div class="form-check">
+            <input type="radio" class="form-check-input" id="definitely" name="recommend" value="definitely" checked>Definitely
+            <label class="form-check-label" for="definitely"></label>
+         </div>
 
-        <label>
-  </fieldset>
-  <fieldset>
-    <label>
-      What is your favorite feature of FreeCodeCamp?
-      <select>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        <option></option>
-        </select>
-    </label>
-    </fieldset>
-  <fieldset >
+         <div class="form-check">
+            <input type="radio" class="form-check-input" id="maybe" name="recommend" value="maybe" >Maybe
+            <label class="form-check-label" for="definitely"></label>
+         </div>
+
+         <div class="form-check">
+            <input type="radio" class="form-check-input" id="no" name="recommend" value="no"> Not sure
+            <label class="form-check-label" for="no"></label>
+         </div>
+
+     
+        </div>
+
+  <div>
           What would you like to see improved?(select all that apply)
-        <label> 
-           <input type="checkbox" value="fend">Front-end Projects
-          </label>
-        <label>
-          <input type="checkbox" value="bend">
-          Back-end Projects
-          </label>
-        <label>
-          <input type="checkbox" value="data">
-          Data Visualization
-          </label>
-        <label>
-          <input type="checkbox" value="challenges">
-          Challenges
-          </label>
-        <label>
-          <input type="checkbox" value="opensource">
-          Open-source community
-          </label>
-        <label>
-          <input type="checkbox" value="gitter">Gitter help rooms
-          </label>
-        <label>  
-        <input type="checkbox" value="videos">
-        Videos
-          </label>
-        <label>   
-        <input type="checkbox" value="meetups">
-        City meetups
-          </label>
-        <label>  
-        <input type="checkbox" value="wiki">
-        wiki
-          </label>
-        <label>   
-        <input type="checkbox" value="forum">
-        Forum
-        </label> 
-        <label>
-          <input type="checkbox" value="courses">
-          Additional courses
-          </label>           
-         
-       </fieldset>
-        <fieldset>
-    <label>
-      Any comment or suggestions?
-      <textarea>
+          <br>
 
-      </textarea>
-    </label>
-  </fieldset>
-  <input id="submit" type="submit" value="Submit">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="inpatient" name="inpatient" value="prefer">Inpatient
+          </div> 
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="outpatient" name="outpatient" value="prefer">Outpatient
+          </div> 
+        </div>
+
+        <div class="mb-3 mt-3">
+    <label for="comment">Any comment or suggestions: </label>
+      <textarea class="form-control" rows="5" id="comment" name="text">
+ </textarea>
+   </div>
+
+  <button class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div> 
+
   </body>
 </html>
